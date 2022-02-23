@@ -1,0 +1,13 @@
+lockfileVersion: 5.3
+
+specifiers:
+  crypto-js: ^3.1.9-1
+
+dependencies:
+  crypto-js: 3.3.0
+
+packages:
+
+  /crypto-js/3.3.0:
+    resolution: {integrity: sha512-DIT51nX0dCfKltpRiXV+/TVZq+Qq2NgF4644+K7Ttnla7zEzqc+kjJyiB96BHNyUTBxyjzRcZYpUdZa+QAqi6Q==}
+    dev: false
