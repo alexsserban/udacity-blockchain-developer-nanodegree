@@ -4,7 +4,8 @@
     "description": "This project creates a Blockchain application to store data into the blocks",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon ./app.js"
     },
     "author": "Udacity - jose.morales@udacity.com",
     "license": "ISC",
@@ -16,5 +17,8 @@
         "express": "^4.17.3",
         "hex2ascii": "0.0.3",
         "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
     }
 }
