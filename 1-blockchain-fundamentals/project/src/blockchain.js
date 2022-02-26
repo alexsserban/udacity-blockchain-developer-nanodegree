@@ -124,7 +124,7 @@ class Blockchain {
             const currentTime = getTimeUTC();
             const diff = (parseInt(currentTime) - parseInt(messageTime)) / 60;
 
-            if (diff >= 100000) {
+            if (diff >= 5) {
                 reject("Not Allowed! 5 minutes passed since you requested the validation message.");
                 return;
             }
