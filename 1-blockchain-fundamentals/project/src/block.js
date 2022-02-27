@@ -40,9 +40,7 @@ class Block {
             const blockHash = this.hash;
 
             // Recalculate the hash of the Block
-            const { height, body, time, previousBlockHash } = this;
-            const recalculatedBlock = { hash: null, height, body, time, previousBlockHash };
-            const recalculatedBlockHash = SHA256(JSON.stringify(recalculatedBlock)).toString();
+            const recalculatedBlockHash = SHA256(JSON.stringify({ ...this, hash: null })).toString();
 
             // Comparing if the hashes changed
             return blockHash === recalculatedBlockHash ? resolve(true) : resolve(false);
