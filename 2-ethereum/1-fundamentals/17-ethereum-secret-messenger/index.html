@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Deploy a Remix Contract</title>
+
+        <link rel="stylesheet" type="text/css" href="main.css" />
+
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <h1>Ethereum Secret Messenger</h1>
+            <hr />
+
+            <label for="message">This site writes a secret message to the Ethereum blockchain!</label>
+            <input id="userInput" type="text" />
+
+            <button id="setMessageButton">Set secret message</button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+        <script>
+            const web3 = new Web3("ws://localhost:7545");
+
+            // Get the contract abi
+            const RemixContract = new web3.eth.Contract(
+                [
+                    {
+                        constant: false,
+                        inputs: [
+                            {
+                                name: "x",
+                                type: "string",
+                            },
+                        ],
+                        name: "setMessage",
+                        outputs: [],
+                        payable: false,
+                        stateMutability: "nonpayable",
+                        type: "function",
+                    },
+                    {
+                        constant: true,
+                        inputs: [],
+                        name: "getMessage",
+                        outputs: [
+                            {
+                                name: "",
+                                type: "string",
+                            },
+                        ],
+                        payable: false,
+                        stateMutability: "view",
+                        type: "function",
+                    },
+                ],
+                "0x0321711A808d5d5c091a48B7a129404ceE41ABDd"
+            );
+
+            $("#setMessageButton").click(async function () {
+                const result = await RemixContract.methods
+                    .setMessage($("#userInput").val())
+                    .send({ from: "0x0F23343dD260baD61f2cbCA3a5AE53B7bc7903cc" });
+
+                console.log(result);
+            });
+        </script>
+    </body>
+</html>
