@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Deploy a Remix Contract</title>
+
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <h1>Deploy a Remix Contract</h1>
+        </div>
+
+        <div>
+            <p>Address</p>
+            <p id="account-name"></p>
+        </div>
+
+        <br />
+
+        <div>
+            <p>Balance</p>
+            <p id="account-balance"></p>
+        </d>
+
+        <script>
+            // Connect a the web3 provider
+            let web3 = new Web3("ws://localhost:7545");
+
+            // Set a default account
+            web3.eth.defaultAccount = web3.eth.accounts[0];
+
+            // Get the contract abi
+            var RemixContract = new web3.eth.Contract(
+                [
+                    {
+                        constant: false,
+                        inputs: [
+                            {
+                                name: "x",
+                                type: "string",
+                            },
+                        ],
+                        name: "setMessage",
+                        outputs: [],
+                        payable: false,
+                        stateMutability: "nonpayable",
+                        type: "function",
+                    },
+                    {
+                        constant: true,
+                        inputs: [],
+                        name: "getMessage",
+                        outputs: [
+                            {
+                                name: "",
+                                type: "string",
+                            },
+                        ],
+                        payable: false,
+                        stateMutability: "view",
+                        type: "function",
+                    },
+                ],
+                "0x0321711A808d5d5c091a48B7a129404ceE41ABDd"
+            );
+
+            const accountName = document.getElementById("account-name");
+            web3.eth.getAccounts().then((accounts) => (accountName.innerHTML = accounts[0]));
+
+            const accountBalance = document.getElementById("account-balance");
+            web3.eth.getBalance("0x0F23343dD260baD61f2cbCA3a5AE53B7bc7903cc").then((balance) =>(accountBalance.innerHTML = balance));
+        </script>
+    </body>
+</html>
