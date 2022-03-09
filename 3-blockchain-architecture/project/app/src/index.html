@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>SupplyChain</title>
+    </head>
+
+    <body>
+        <h1>Supply Chain</h1>
+
+        <hr />
+
+        <br />
+
+        <div>
+            <h2>Access</h2>
+
+            <div>
+                <h3>Farmer</h3>
+                <input type="text" id="farmer" size="50" />
+                <br />
+                <br />
+                <button onclick="App.grantFarmerAccess()">Grant Access</button>
+            </div>
+
+            <div>
+                <h3>Distributor</h3>
+                <input type="text" id="distributor" size="50" />
+                <br />
+                <br />
+                <button onclick="App.grantDistributorAccess()">Grant Access</button>
+            </div>
+
+            <div>
+                <h3>Retailer</h3>
+                <input type="text" id="retailer" size="50" />
+                <br />
+                <br />
+                <button onclick="App.grantRetailerAccess()">Grant Access</button>
+            </div>
+
+            <div>
+                <h3>Consumer</h3>
+                <input type="text" id="consumer" size="50" />
+                <br />
+                <br />
+                <button onclick="App.grantConsumerAccess()">Grant Access</button>
+            </div>
+        </div>
+
+        <hr />
+        <br />
+
+        <div>
+            <h2>Fetch by UPC - Public Access</h2>
+            <input type="number" id="fetchItemUpc" size="50" value="1" />
+            <br />
+            <br />
+            <button onclick="App.fetchItem()">Fetch</button>
+        </div>
+
+        <hr />
+        <br />
+
+        <div>
+            <h2>Farmer</h2>
+
+            <div style="display: flex">
+                <div style="margin-right: 10px">
+                    <p>Farm Name</p>
+                    <input type="text" id="farmName" size="50" value="John Doe" />
+                </div>
+
+                <div style="margin-right: 10px">
+                    <p>Farm Information</p>
+                    <input type="text" id="farmInfo" size="50" value="Yarray Valley" />
+                </div>
+
+                <div style="margin-right: 10px">
+                    <p>Farm Lat</p>
+                    <input type="text" id="farmLat" size="50" value="-38.239770" />
+                </div>
+
+                <div style="margin-right: 10px">
+                    <p>Farm Long</p>
+                    <input type="text" id="farmLong" size="50" value="144.341490" />
+                </div>
+
+                <div style="margin-right: 10px">
+                    <p>Product Notes</p>
+                    <input type="text" id="productNotes" size="50" value="Best beans for Espresso" />
+                </div>
+            </div>
+            <br />
+
+            <input type="file" id="image" />
+
+            <br />
+            <br />
+
+            <button onclick="App.harvest()">Harvest</button>
+
+            <br />
+            <br />
+            <br />
+
+            <div style="display: flex">
+                <div style="margin-right: 10px">
+                    <p>UPC</p>
+                    <input type="number" id="farmerUpc" size="50" value="1" />
+                </div>
+
+                <div>
+                    <p>Price</p>
+                    <input type="number" id="farmerPrice" size="50" value="10" /> ETH <br />
+                </div>
+            </div>
+
+            <br />
+            <button onclick="App.process()">Process</button>
+            <button onclick="App.pack()">Pack</button>
+            <button onclick="App.setForSale()">Set For Sale</button>
+        </div>
+
+        <hr />
+        <br />
+
+        <div>
+            <h2>Distributor</h2>
+
+            <div style="display: flex">
+                <div style="margin-right: 10px">
+                    <p>UPC</p>
+                    <input type="number" id="distributorBuyUpc" size="50" value="1" />
+                </div>
+
+                <div>
+                    <p>Value</p>
+                    <input type="number" id="distributorBuyValue" size="50" value="10" /> ETH
+                </div>
+            </div>
+
+            <br />
+            <button onclick="App.buy()">Buy</button>
+
+            <br />
+            <br />
+
+            <div style="display: flex">
+                <div style="margin-right: 10px">
+                    <p>UPC</p>
+                    <input type="number" id="distributorShipUpc" size="50" value="1" />
+                </div>
+
+                <div>
+                    <p>Retailer</p>
+                    <input type="text" id="distributorShipRetailer" size="50" />
+                </div>
+            </div>
+
+            <br />
+
+            <button onclick="App.ship()">Ship</button>
+        </div>
+
+        <hr />
+        <br />
+
+        <div>
+            <h2>Retailer</h2>
+
+            <p>UPC</p>
+
+            <input type="number" id="retailerUpc" size="50" value="1" />
+
+            <br />
+            <br />
+
+            <button onclick="App.receive()">Receive</button>
+        </div>
+
+        <hr />
+        <br />
+
+        <div>
+            <h2>Consumer</h2>
+
+            <div style="display: flex">
+                <div style="margin-right: 10px">
+                    <p>UPC</p>
+                    <input type="number" id="consumerUpc" size="50" value="1" />
+                </div>
+
+                <div>
+                    <p>Value</p>
+                    <input type="number" id="consumerValue" size="50" value="20" /> ETH
+                </div>
+            </div>
+
+            <br />
+
+            <button onclick="App.purchase()">Purchase</button>
+        </div>
+
+        <hr />
+        <br />
+
+        <div>
+            <h2>History</h2>
+
+            <p>UPC</p>
+
+            <input type="number" id="historyUpc" size="50" value="1" />
+
+            <br />
+            <br />
+
+            <button onclick="App.getHistory()">Get History</button>
+
+            <div id="history">
+                <p id="history0"></p>
+                <p id="history1"></p>
+                <p id="history2"></p>
+                <p id="history3"></p>
+                <p id="history4"></p>
+                <p id="history5"></p>
+                <p id="history6"></p>
+                <p id="history7"></p>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
