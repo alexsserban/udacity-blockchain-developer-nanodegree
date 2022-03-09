@@ -1,0 +1,19 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "description": "",
+    "private": true,
+    "scripts": {
+        "dev": "webpack-dev-server"
+    },
+    "devDependencies": {
+        "copy-webpack-plugin": "^4.6.0",
+        "webpack": "^4.28.1",
+        "webpack-cli": "^3.2.1",
+        "webpack-dev-server": "^3.1.14"
+    },
+    "dependencies": {
+        "ipfs-http-client": "^56.0.1",
+        "web3": "^1.7.1"
+    }
+}
