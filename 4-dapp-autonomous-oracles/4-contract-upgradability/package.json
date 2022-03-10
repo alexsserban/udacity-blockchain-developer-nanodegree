@@ -1,0 +1,17 @@
+{
+    "name": "blockchain-day1",
+    "version": "1.0.0",
+    "description": "",
+    "directories": {
+        "test": "test"
+    },
+    "repository": "https://github.com/techbubble/blockchain-day1",
+    "license": "MIT",
+    "scripts": {
+        "test": "truffle test test/ExerciseC6C.js"
+    },
+    "author": "Nik Kalyani <nik@kalyani.com> https://www.kalyani.com",
+    "dependencies": {
+        "openzeppelin-solidity": "^4.5.0"
+    }
+}
