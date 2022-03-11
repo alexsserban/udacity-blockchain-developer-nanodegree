@@ -3,7 +3,11 @@ lockfileVersion: 5.3
 specifiers:
   '@truffle/hdwallet-provider': ^2.0.4
   express: 4.17.3
+  openzeppelin-solidity: ^4.5.0
   web3: 1.7.1
+
+dependencies:
+  openzeppelin-solidity: 4.5.0
 
 devDependencies:
   '@truffle/hdwallet-provider': 2.0.4
@@ -2477,6 +2481,11 @@ packages:
     dependencies:
       wrappy: 1.0.2
     dev: true
+
+  /openzeppelin-solidity/4.5.0:
+    resolution: {integrity: sha512-eWbLfEeyrL6MhCnFV+rY+BbB1j/YkY71HP40MvXqN7vO0amUsmHZ4NhtgYaOVSQooEtOl8f8Za3gkfS2KnHYBA==}
+    hasBin: true
+    dev: false
 
   /p-cancelable/0.3.0:
     resolution: {integrity: sha512-RVbZPLso8+jFeq1MfNvgXtCRED2raz/dKpacfTNxsx6pLEpEomM7gah6VeHSYV3+vo0OAi4MkArtQcWWXuQoyw==}
