@@ -1,0 +1,14 @@
+lockfileVersion: 5.3
+
+specifiers:
+  openzeppelin-solidity: ^4.5.0
+
+devDependencies:
+  openzeppelin-solidity: 4.5.0
+
+packages:
+
+  /openzeppelin-solidity/4.5.0:
+    resolution: {integrity: sha512-eWbLfEeyrL6MhCnFV+rY+BbB1j/YkY71HP40MvXqN7vO0amUsmHZ4NhtgYaOVSQooEtOl8f8Za3gkfS2KnHYBA==}
+    hasBin: true
+    dev: true
