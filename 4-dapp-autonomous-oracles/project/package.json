@@ -7,9 +7,8 @@
         "test": "truffle test ./test/flightSurety.js"
     },
     "devDependencies": {
-        "express": "4.16.4",
-        "truffle-hdwallet-provider": "1.0.2",
-        "web3": "1.0.0-beta.37"
-    },
-    "dependencies": {}
+        "express": "4.17.3",
+        "@truffle/hdwallet-provider": "^2.0.4",
+        "web3": "1.7.1"
+    }
 }
