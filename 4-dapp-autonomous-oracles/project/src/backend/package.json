@@ -7,11 +7,10 @@
         "test": "truffle test ./test/flightSurety.js"
     },
     "devDependencies": {
-        "@truffle/hdwallet-provider": "^2.0.4",
-        "express": "4.17.3",
-        "web3": "1.7.1"
+        "web3": "^1.7.1"
     },
     "dependencies": {
-        "openzeppelin-solidity": "^4.5.0"
+        "openzeppelin-solidity": "^4.5.0",
+        "truffle-assertions": "^0.9.2"
     }
 }
