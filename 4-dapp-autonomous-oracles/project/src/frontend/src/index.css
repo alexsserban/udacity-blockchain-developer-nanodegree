@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply bg-slate-300 p-4 rounded-lg hover:bg-slate-400;
+    }
+
+    .input {
+        @apply p-4 rounded-lg focus:ring-4 focus:ring-slate-400 focus:outline-none;
+    }
+}
