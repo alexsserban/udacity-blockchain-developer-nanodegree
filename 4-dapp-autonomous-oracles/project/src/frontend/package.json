@@ -3,9 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc --noEmit && vite build",
-        "preview": "vite preview"
+        "dapp": "vite"
     },
     "dependencies": {
         "ethers": "^5.6.0",
