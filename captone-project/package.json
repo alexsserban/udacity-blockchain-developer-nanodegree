@@ -3,18 +3,12 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "scripts": {
-        "dev": "lite-server",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "keywords": [],
     "license": "MIT",
-    "devDependencies": {
-        "lite-server": "2.4.0"
-    },
     "dependencies": {
-        "openzeppelin-solidity": "^2.2.0",
-        "solc": "^0.5.2",
-        "solc-js": "^0.5.2"
+        "@openzeppelin/contracts": "^4.5.0",
+        "@openzeppelin/test-helpers": "^0.5.15",
+        "@truffle/hdwallet-provider": "^2.0.4",
+        "dotenv": "^16.0.0"
     }
 }
