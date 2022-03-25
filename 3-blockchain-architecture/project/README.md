@@ -3,6 +3,12 @@ Contract Address: 0x87292aA8bC44485ABa731D14442555Fb6dF02aFa
 
 TX: 0xdb705f9d6c417b91fb731c28c432e7cd70692f37ed723d85a6d5437c621c3fef
 
+## Details
+ - Implemented 8 total stages to complete the process, from the farmer who can harvest coffee to the end customer who can purchase.
+ - Added Access Control for 4 roles: Farmer, Distributor, Retailer, and Consumer.
+ - Used IPFS for images.
+ - Coffee history can be viewed from the frontend.
+
 Aditional Libraries
   - @truffle/hdwallet-provider -> deploying contract to Rinkeby with Infura
   - dotenv -> use env variables for truffle config
