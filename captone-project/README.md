@@ -1,9 +1,14 @@
 # Real Estate Marketplace
 
-## Addresses
-  - ZoKrates (zk-SNARKs) Verifier: 0x4F2F0c0E92573f2b2061512bd8875D6E33c947B9
-  - SolnSquareVerifier (inheriting UdacityCapstoneToken): 0xE1F7AAC4541276c987D97052Bf590b54B742A5c5
-  - OpenSea: https://testnets.opensea.io/collection/udacitycapstonetoken-v2
+ERC721 Tokens with zk-SNARKs - [OpenSea](https://testnets.opensea.io/collection/udacitycapstonetoken-v2)
+
+## Contracts
+  - ZoKrates (zk-SNARKs) Verifier
+  - SolnSquareVerifier (inheriting UdacityCapstoneToken)
+
+## Details
+ - Used OpenZeppelin contracts: ERC721Enumerable, ERC721URIStorage, Pausable, Ownable.
+ - Impleted ZoKrates for zk-SNARKs proof that needs to be provided when minting a new token.
 
 ## Getting started
 
